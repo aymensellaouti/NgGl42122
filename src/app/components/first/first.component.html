@@ -1,0 +1,15 @@
+<p [hidden]="isHidden"> {{message}}</p>
+<div (click)="showHide()"  class="alert alert-warning">
+  <input
+    (change)="changeMessage(messageInput.value)"
+    #messageInput
+    type="text"
+    class="form-control"
+  >
+  <app-second></app-second>
+</div>
+<!--
+
+  attributs
+  events
+-->
