@@ -1,0 +1,33 @@
+<p
+  [ngStyle]="{
+    color: color,
+    fontSize: size + 'px',
+    fontFamily: font
+  }"
+>ng-style works!</p>
+
+<div
+  (click)="allumerEteindre()"
+  [ngClass]="{
+    'allume': allume,
+    'eteinte': !allume
+  }"
+>
+  lampe
+</div>
+
+<div
+  appHighlight
+>est</div>
+<div
+  [in]="'black'" [out]="'white'"
+  appHighlight
+>css</div>
+<div
+  [in]="'red'" [out]="'white'"
+  appHighlight
+>ess ca</div>
+<div
+  [in]="'green'" [out]="'white'"
+  appHighlight
+>hamhama jsk</div>
