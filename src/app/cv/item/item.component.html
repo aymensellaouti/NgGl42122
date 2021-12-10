@@ -1,6 +1,6 @@
 <div (click)="selectCv()">
   <img
-    src="assets/images/{{cv?.path}}"
+    src="assets/images/{{cv?.path | defaultImage}}"
     alt="{{cv?.name}}"
     class="rounded-circle"
     width="50"

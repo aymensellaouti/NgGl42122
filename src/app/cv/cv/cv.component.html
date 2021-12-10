@@ -1,4 +1,8 @@
 <div class="row">
-  <div class="col"><app-list (forwardCvItem)="getSelectedCv($event)"></app-list></div>
+  <div class="col">
+    <div class="alert alert-info">
+      {{ date | date | uppercase }}
+    </div>
+    <app-list (forwardCvItem)="getSelectedCv($event)"></app-list></div>
   <div class="col"><app-detail [cv]="selectedCv"></app-detail></div>
 </div>

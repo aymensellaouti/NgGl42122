@@ -16,6 +16,7 @@ import { ItemComponent } from './cv/item/item.component';
 import { DetailComponent } from './cv/detail/detail.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     ItemComponent,
     DetailComponent,
     NgStyleComponent,
-    HighlightDirective
+    HighlightDirective,
+    DefaultImagePipe
   ],
     imports: [
         BrowserModule,
