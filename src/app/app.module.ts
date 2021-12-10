@@ -19,6 +19,9 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import {LoggerService} from "./services/logger.service";
 import { TodoComponent } from './todo/todo/todo.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +40,14 @@ import { TodoComponent } from './todo/todo/todo.component';
     NgStyleComponent,
     HighlightDirective,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule, // required animations module
+        ToastrModule.forRoot(), // ToastrModule added
     ],
   providers: [],
   bootstrap: [AppComponent]

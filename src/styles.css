@@ -2,4 +2,8 @@
 
 @import "~bootstrap";
 @import "~font-awesome";
+
+@import "~ngx-toastr/toastr.css";
+
 @import "assets/css/rotating-card.css";
+

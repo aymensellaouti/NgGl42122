@@ -3,7 +3,10 @@
     src="assets/images/{{cv?.path | defaultImage}}"
     alt="{{cv?.name}}"
     class="rounded-circle"
-    width="50"
-    height="50">
+    [ngStyle]="{
+      width: size + 'px',
+      height: size + 'px'
+    }"
+  >
     {{cv?.firstname}} {{cv?.name}}
 </div>
