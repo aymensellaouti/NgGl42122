@@ -17,6 +17,8 @@ import { DetailComponent } from './cv/detail/detail.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import {LoggerService} from "./services/logger.service";
+import { TodoComponent } from './todo/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     DetailComponent,
     NgStyleComponent,
     HighlightDirective,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
     imports: [
         BrowserModule,
