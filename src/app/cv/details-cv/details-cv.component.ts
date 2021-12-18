@@ -21,10 +21,14 @@ export class DetailsCvComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       (params) => {
-          this.cv = this.cvService.findCvById(+params['id']);
-          if (!this.cv) {
-            this.router.navigate(['cv']);
-          }
+          this.cvService.findCvById(+params['id']).subscribe(
+            (cv) => {
+              this.cv = cv;
+            },
+            (erreur) => {
+              this.router.navigate(['cv']);
+            }
+          );
       }
     );
     this.activatedRoute.queryParams.subscribe(
@@ -33,13 +37,16 @@ export class DetailsCvComponent implements OnInit {
       }
     )
   }
-
   delete() {
-    if (this.cvService.deleteCv(this.cv)) {
-      this.toaster.success(`Cv supprimé avec succès`);
-      this.router.navigate(['cv']);
-    } else {
-      this.toaster.error(`Problème Système veuillez contacter l'admin`);
-    }
+    this.cvService.deleteCvById(this.cv.id).subscribe(
+      () => {
+        this.toaster.success(`Cv supprimé avec succès`);
+        this.router.navigate(['cv']);
+      },
+      (erreur) => {
+        console.log(erreur);
+        this.toaster.error(`Problème Système veuillez contacter l'admin`);
+      }
+    );
   }
 }

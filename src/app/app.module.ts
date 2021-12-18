@@ -30,6 +30,9 @@ import { FrontComponent } from './components/front/front.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './components/login/login.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import {HttpClientModule} from "@angular/common/http";
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import {AuthentificationInterceptorProvider} from "./auth/interceptors/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -56,16 +59,18 @@ import { TestObservableComponent } from './components/test-observable/test-obser
     FrontComponent,
     NF404Component,
     LoginComponent,
-    TestObservableComponent
+    TestObservableComponent,
+    AddPersonneComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        HttpClientModule,
         BrowserAnimationsModule, // required animations module
         ToastrModule.forRoot(), // ToastrModule added
     ],
-  providers: [],
+  providers: [AuthentificationInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

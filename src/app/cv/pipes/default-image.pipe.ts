@@ -7,7 +7,7 @@ import {CONSTANTES} from "../../config/constantes.config";
 export class DefaultImagePipe implements PipeTransform {
 
   transform(path: string): string {
-    if (path.trim().length) {
+    if (path && path.trim().length) {
       return path;
     }
     return CONSTANTES.defaultImage;
