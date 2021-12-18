@@ -28,6 +28,7 @@ import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 import { BackComponent } from './components/back/back.component';
 import { FrontComponent } from './components/front/front.component';
 import { NF404Component } from './components/nf404/nf404.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NF404Component } from './components/nf404/nf404.component';
     DetailsCvComponent,
     BackComponent,
     FrontComponent,
-    NF404Component
+    NF404Component,
+    LoginComponent
   ],
     imports: [
         BrowserModule,

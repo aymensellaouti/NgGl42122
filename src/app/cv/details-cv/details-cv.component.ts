@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Cv} from "../model/cv";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CvService} from "../services/cv.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-details-cv',
@@ -13,7 +14,8 @@ export class DetailsCvComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private cvService: CvService,
-    private router: Router
+    private router: Router,
+    private toaster: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -32,4 +34,12 @@ export class DetailsCvComponent implements OnInit {
     )
   }
 
+  delete() {
+    if (this.cvService.deleteCv(this.cv)) {
+      this.toaster.success(`Cv supprimé avec succès`);
+      this.router.navigate(['cv']);
+    } else {
+      this.toaster.error(`Problème Système veuillez contacter l'admin`);
+    }
+  }
 }
