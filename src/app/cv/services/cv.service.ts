@@ -8,7 +8,7 @@ export class CvService {
   private cvs: Cv[] = [];
   constructor() {
     this.cvs = [
-      new Cv(1, 'sellaouti', 'aymen', 'rotating_card_profile.png','teacher', '1234', 39),
+      new Cv(1, 'sellaouti', 'aymen', 'as.jpg','teacher', '1234', 39),
       new Cv(2, 'sellaouti', 'aymen', 'rotating_card_profile2.png','teacher', '1234', 39),
       new Cv(3, 'sellaouti', 'aymen', '                 ','teacher', '1234', 39),
       new Cv(4, 'sellaouti', 'aymen', '','teacher', '1234', 39),
@@ -16,5 +16,10 @@ export class CvService {
   }
   getCvs(): Cv[] {
     return this.cvs;
+  }
+  findCvById(id: number): Cv {
+    return this.cvs.find(
+      cv => cv.id === id
+    );
   }
 }

@@ -22,6 +22,12 @@ import { TodoComponent } from './todo/todo/todo.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { HeaderComponent } from './components/header/header.component';
+import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
+import { BackComponent } from './components/back/back.component';
+import { FrontComponent } from './components/front/front.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +47,16 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
     HighlightDirective,
     DefaultImagePipe,
     TodoComponent,
-    EmbaucheComponent
+    EmbaucheComponent,
+    HeaderComponent,
+    DetailsCvComponent,
+    BackComponent,
+    FrontComponent,
+    NF404Component
   ],
     imports: [
         BrowserModule,
+        AppRoutingModule,
         FormsModule,
         BrowserAnimationsModule, // required animations module
         ToastrModule.forRoot(), // ToastrModule added

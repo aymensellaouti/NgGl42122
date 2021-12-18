@@ -1,3 +1,3 @@
 export const CONSTANTES = {
-  defaultImage: 'tim_logo.png'
+  defaultImage: 'cv.png'
 };
