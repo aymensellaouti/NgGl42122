@@ -3,8 +3,11 @@
     <div class="alert alert-info">
       {{ date | date | uppercase }}
     </div>
-    <app-list (forwardCvItem)="getSelectedCv($event)"></app-list></div>
-  <div class="col"><app-detail [cv]="selectedCv"></app-detail></div>
+    <div class="alert alert-warning">
+      Le nombre de click est : {{nbClick}}
+    </div>
+    <app-list></app-list></div>
+  <div class="col"><app-detail></app-detail></div>
 </div>
 <div class="row">
   <app-embauche></app-embauche>

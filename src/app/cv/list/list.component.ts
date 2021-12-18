@@ -9,14 +9,14 @@ import {CvService} from "../services/cv.service";
 })
 export class ListComponent implements OnInit {
   cvs: Cv[] = [];
-  @Output() forwardCvItem = new EventEmitter<Cv>();
+  // @Output() forwardCvItem = new EventEmitter<Cv>();
   constructor(
     private cvService: CvService
   ) {}
   ngOnInit(): void {
     this.cvs = this.cvService.getCvs();
   }
-  forwardCv(cv: Cv) {
-    this.forwardCvItem.emit(cv);
-  }
+  // forwardCv(cv: Cv) {
+  //   this.forwardCvItem.emit(cv);
+  // }
 }
